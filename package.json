@@ -1,0 +1,17 @@
+{
+  "name": "static",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "docker:build": "docker build . -t thejimmyg/npm-serve:0.1.0",
+    "docker:push": "docker push thejimmyg/npm-serve:0.1.0",
+    "docker:run": "docker run --init -p 80:80 -v \"`pwd`/public:/app/public\" thejimmyg/npm-serve:0.1.0",
+    "start": "serve public"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "serve": "^10.1.2"
+  }
+}
